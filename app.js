@@ -15,5 +15,17 @@ const questions = {
         "좋은 디자인이란 무엇이라고 생각하나요?",
         "디자인 영감을 어디서 얻나요?"
     ]
-}
+};
 
+app.get('/api/questions',(req,res)=>{
+    const category = req.query.category;
+
+    if(!category || !questions[category]){
+        return res.status(400).json({error: "missing"});
+    }
+
+    const randomIndex = Math.floor(Math.random() * questions[category].length);
+    const question = questions[category][randomIndex];
+
+    res.json({question});
+})
