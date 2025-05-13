@@ -28,4 +28,8 @@ app.get('/api/questions',(req,res)=>{
     const question = questions[category][randomIndex];
 
     res.json({question});
-})
+});
+
+app.listen(PORT,()=>{
+    console.log(`Server running on http://localhost:${PORT}`);
+});
