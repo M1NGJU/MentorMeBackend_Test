@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const admin = require('./firebase-config');
+const admin = require('./firebase-config'); 
 const app = express();
 const PORT = 3000;
 
