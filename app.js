@@ -6,9 +6,6 @@ const PORT = 3000;
 
 // const serviceAccount = require('./firebaseServiceAccountKey.json');
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
 
 const db = admin.firestore();
 
